@@ -1,0 +1,144 @@
+.profile_div img{
+    max-width: 56px;
+    border-radius: 50%;
+    border: 1px solid #111;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Form Styling */
+.form-card {
+    background: linear-gradient(145deg, #f0f5f5, #cce7e7);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1d5d5d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  
+  .form-container {
+    margin-top: 30px;
+  }
+  
+  .form-control-style {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    padding: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .form-control-style:focus {
+    border-color: #1d5d5d;
+    box-shadow: 0 0 8px rgba(29, 93, 93, 0.5);
+  }
+  
+  /* Radio Button Styling */
+  .radio-group .gender-radio {
+    display: inline-block;
+    margin-right: 25px;
+    margin-left: 50px;
+    padding: 10px 0;
+  }
+  
+  .radio-group .gender-radio input {
+    transform: scale(1.3);
+    margin-right: 5px;
+  }
+  
+  /* Custom Select Box Styling */
+  .custom-select .Select__control {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .custom-select .Select__control:focus {
+    border-color: #1d5d5d;
+    box-shadow: 0 0 8px rgba(29, 93, 93, 0.5);
+  }
+  
+  /* File Upload Styling */
+  .file-upload {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .file-upload:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Submit Button Styling */
+  .submit-btn {
+    background-color: #008080;
+    border: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #005757;
+    cursor: pointer;
+  }
+  
+  /* Hover Effects for Inputs */
+  .form-control-style:hover, .submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .form-card {
+      padding: 15px;
+    }
+  
+    .profile-img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .title {
+      font-size: 24px;
+    }
+  }
+  

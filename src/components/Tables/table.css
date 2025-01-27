@@ -1,0 +1,128 @@
+.img_parent img{
+    width: 35px;
+    border-radius: 50%;
+}
+
+.action{
+    background: none !important;
+    border: none;
+}
+.dropdown-toggle::after{
+    display: none;
+}
+
+.dropdown_btn{
+    background: none !important;
+    border: none;
+}
+
+.dots{
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+
+/* General Table Styles */
+.table-styled {
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.08); /* Strong shadow */
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #f7f7f7, #e3e3e3); /* Gradient background */
+    border-collapse: collapse;
+    animation: tableFadeIn 1s ease-out; /* Animation for fade-in */
+  }
+  
+  @keyframes tableFadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+
+
+
+  /* Header Styles */
+  .table-header {
+    background: #008080; /* Teal background */
+    color: #fff; /* White text */
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: 3px solid #ffffff; /* Subtle separation line */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Table Row Styling */
+  .table-styled tbody tr {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .table-styled tbody tr:hover {
+    background-color: #f4f6f7; /* Light hover background */
+    transform: translateY(-5px); /* Subtle lift effect */
+  }
+  
+  /* Table Cell Styling */
+  .table-styled td {
+    font-size: 14px;
+    padding: 12px;
+    text-align: center;
+    color: #333; /* Dark text */
+  }
+  
+  .table-styled td img {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Image shadow */
+  }
+  
+  /* Status Dropdown Styling */
+  .dropdown_btn {
+    background-color: #fff;
+    color: #495057;
+    border: none;
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 5px 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown_btn:hover {
+    background-color: #008080; /* Hover effect for status button */
+    color: #fff;
+  }
+  
+  /* Action Dropdown */
+  .action {
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    cursor: pointer;
+    color: #008080;
+  }
+  
+  .action:hover {
+    color: #005757; /* Darker hover color */
+    transform: scale(1.1); /* Slightly enlarging effect */
+  }
+  
+  /* Badge Styling */
+  .badge {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Pagination Styling */
+  .pagination {
+    padding: 10px;
+  
+    color: white;
+    font-size: 14px;
+  }
+  
