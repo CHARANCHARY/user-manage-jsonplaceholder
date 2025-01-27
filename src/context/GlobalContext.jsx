@@ -63,26 +63,27 @@ export const GlobalStateProvider = ({ children }) => {
     // };
 
     // // Delete a user
-    // const deleteUser = async (id) => {
-    //     try {
-    //         const res = await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
-    //         if (res.status === 200) {
-    //             const filteredData = data.filter((user) => user.id !== id);
-    //             setData(filteredData);
-    //             toast.success("User deleted successfully!");
-    //         }
-    //     } catch (error) {
-    //         toast.error("Failed to delete user. Please try again later.");
-    //         console.log("Delete user error", error);
-    //     }
-    // };
+    const deleteUser = async (id) => {
+        try {
+            const res = await axios.delete(`https://jsonplaceholder.typicode.com/users/${id}`);
+            if (res.status === 200) {
+                const filteredData = data.filter((user) => user.id !== id);
+                setData(filteredData);
+                toast.success("User deleted successfully!");
+                
+            }
+        } catch (error) {
+            toast.error("Failed to delete user. Please try again later.");
+            console.log("Delete user error", error);
+        }
+    };
 
      useEffect(() => {
         fetchUsers(currentPage); // Fetch users for the current page
     }, [location, currentPage]); // Fetch when location changes or current page changes
 
     return (
-        <globalState.Provider value={{ data, setData , currentPage, totalPages, setCurrentPage , fetchUsers}}>
+        <globalState.Provider value={{ data, setData , currentPage, totalPages, setCurrentPage , fetchUsers, deleteUser}}>
             {children}
         </globalState.Provider>
     );

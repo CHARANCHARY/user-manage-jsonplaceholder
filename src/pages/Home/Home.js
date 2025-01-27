@@ -5,6 +5,8 @@ import Spiner from "../../components/Spiner/Spiner";
 import { useNavigate } from "react-router-dom";
 import "./home.css";
 import { globalState } from '../../context/GlobalContext';
+import { ToastContainer } from "react-toastify";
+
 
 const Home = () => {
   const {  fetchUsers } = useContext(globalState);
@@ -67,6 +69,8 @@ const Home = () => {
 
         {/* Show Spinner or Table */}
         {showspin ? <Spiner /> : <Tables setPage={setPage} page={page} totalpage={totalpage} />}
+
+         <ToastContainer position="top-center" />
       </div>
     </>
   );

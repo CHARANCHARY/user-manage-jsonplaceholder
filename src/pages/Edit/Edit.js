@@ -63,7 +63,7 @@ const Edit = () => {
     }
 
     try {
-      await axios.put(
+     const res =  await axios.put(
         `https://jsonplaceholder.typicode.com/users/${id}`,
         {
           name: `${inputData.fname} ${inputData.lname}`,
@@ -71,9 +71,13 @@ const Edit = () => {
           company: { name: inputData.department },
         }
       );
-
-      toast.success("User updated successfully.");
-      navigate("/");
+      if (res.status == 200){
+        toast.success("User updated successfully.");
+        setTimeout(()=>{
+          navigate('/');
+        }, 3000)
+      }
+     
     } catch (error) {
       toast.error("Failed to update user data.");
     }

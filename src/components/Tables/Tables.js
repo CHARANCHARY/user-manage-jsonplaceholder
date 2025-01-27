@@ -8,9 +8,11 @@ import { globalState } from '../../context/GlobalContext';
 import Paginations from '../pagination/Paginations';
 import { useNavigate } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
+import { ToastContainer } from "react-toastify";
+
 
 const Tables = () => {
-  const { data, currentPage, totalPages, setCurrentPage } = useContext(globalState);
+  const { data, currentPage, totalPages, setCurrentPage , deleteUser } = useContext(globalState);
   const navigate = useNavigate();
 
   return (
@@ -45,13 +47,10 @@ const Tables = () => {
                         <FaBars /> {/* Only the bar icon is visible here */}
                       </Dropdown.Toggle>
                       <Dropdown.Menu style={{   position : 'static'}}>
-                        <Dropdown.Item onClick={() => navigate(`/userprofile/${i.id}`)}>
-                          <span>View</span>
-                        </Dropdown.Item>
                         <Dropdown.Item onClick={() => navigate(`/edit/${i.id}`)}>
                           <span>Edit</span>
                         </Dropdown.Item>
-                        <Dropdown.Item onClick={() => navigate(`/delete/${i.id}`)}>
+                        <Dropdown.Item onClick={() => deleteUser(i.id)}>
                           <span>Delete</span>
                         </Dropdown.Item>
                       </Dropdown.Menu>
@@ -74,6 +73,7 @@ const Tables = () => {
           </Card>
         </div>
       </Row>
+      <ToastContainer position="top-center" />
     </div>
   );
 };
